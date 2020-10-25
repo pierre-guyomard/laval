@@ -145,7 +145,7 @@ Ce gène est localisé sur le chromosome 2 humain.
  La longueur en nucléotide de sa séquence est de 26 422 bases. (GRCh37/hg19)
     
  * Quelle est la longueur en acides aminés de la protéine associée (ou des isoformes) ?
-La protéine associée au gène PLCD4 est composé de 762 acides aminés et d'ub emasse moléculaire de 87 585 Da.
+La protéine associée au gène PLCD4 est composé de 762 acides aminés et possède une emasse moléculaire de 87 585 Da.
 
 \newpage
 
@@ -154,7 +154,7 @@ La protéine associée au gène PLCD4 est composé de 762 acides aminés et d'ub
 ## 1. Single-omic: l'ACP avec `mixOmics`
 
 **Question 6:** A quoi sert l'Analyse en Composante Principale ? Expliquez brievement sont fonctionnement ?
-L'Analyse en Composante Principale permet d'analyser et de visualiser un jeu de données contenant des individus décrits par plusieurs variables quantitatives. Le principe est de diminuer le nombre de variables en créant des nouvelles variables articificielles orthogonales entre-elles permettant de visualiser un maximum de variation avec un minimum d'axe.
+L'Analyse en Composante Principale permet d'analyser et de visualiser un jeu de données contenant des individus décrits par plusieurs variables quantitatives. Le principe est de diminuer le nombre de variables en créant des nouvelles variables articificielles orthogonales entre-elles permettant de visualiser un maximum de variation avec un minimum d'axe. Cela revient à trouver le plan qui découpe au mieux le nuage de points.
 
 
 1. Réaliser l'ACP sur les données mRNA.
@@ -167,8 +167,9 @@ acp
 **Question 7:** Combien de composantes retenez-vous ? Justifiez / Illustrez
 ```{r}
 barplot(acp$explained_variance, ylab = "Explained Variance",xlab = "Principal Components")
+
 ```
-Nous retenons que les 2 premières composantes car elles représentent presque 80 % de nos données. 
+Nous retenons que les 2 premières composantes car elles représentent presque 80 % de la variance de nos données. 
 
 
 2. Après avoir relancer l'ACP avec le bon nombre de composante, utiliser un graphique pour représenter les variables.
